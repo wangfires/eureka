@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+        <bean id="aa" class="UserDaoImpl"></bean>
+        <bean class="UserServiceImpl" id="bb">
+            <property name="userDao" ref="aa"></property>
+            <property name="name" value="wangwang"></property>
+            <property name="a" value="1"></property>
+            <property name="price" value="22.2"></property>
+            <property name="userDaos">
+                <list>
+                    <ref bean="aa"></ref>
+                    <ref bean="aa"></ref>
+                    <ref bean="aa"></ref>
+
+                </list>
+
+            </property>
+            <property name="map">
+                <map>
+                    <entry key="11" value-ref="aa"/>
+                    <entry key="12" value-ref="aa"/>
+                    <entry key="13" value-ref="aa"/>
+                    <entry key="14" value-ref="aa"/>
+
+
+                </map>
+            </property>
+            <property name="properties">
+              <props>
+                  <prop key="aa">214</prop>
+                  <prop key="125">123</prop>
+              </props>
+            </property>
+        </bean>
+    <bean id="clazzService" class="com.baizhi.service.ClazzServiceImpl"></bean>
+    <!--声明通知-->
+    <bean id="advice" class="advice.MyAdvice"></bean>
+    <aop:config>
+        <!--切入点-->
+        <aop:pointcut id="pc" expression="execution(* com.baizhi.service.ClazzServiceImpl.*(..))"></aop:pointcut>
+        <!--通知+切入点-->
+        <aop:advisor advice-ref="advice" pointcut-ref="pc"></aop:advisor>
+    </aop:config>
+</beans>

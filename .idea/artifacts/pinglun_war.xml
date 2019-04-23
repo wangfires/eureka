@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pinglun:war">
+    <output-path>$PROJECT_DIR$/pinglun/target</output-path>
+    <root id="archive" name="pinglun.war">
+      <element id="artifact" artifact-name="pinglun:war exploded" />
+    </root>
+  </artifact>
+</component>

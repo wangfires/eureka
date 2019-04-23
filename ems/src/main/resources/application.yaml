@@ -1,0 +1,26 @@
+server:
+  port: 8989
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  http:
+    multipart:
+      max-request-size: 209715200  #用来控制文件上传大小的限制
+      max-file-size: 209715200 #用来指定服务端最大文件大小
+  datasource:
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/ems
+    tomcat:
+      driver-class-name: com.baizhi.entity
+
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:com/baizhi/mapper/*.xml

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.TagDao">
+  <insert id="addTag" parameterType="com.baizhi.entity.Tag">
+	 insert into tag values(#{id},#{name},#{count})
+  </insert>
+    <delete id="deleteTag" parameterType="String">
+        delete from tag where id = #{id}
+    </delete>
+    <select id="findAll" resultType="tag">
+        select * from tag order by count desc
+    </select>
+    <update id="updateCount" parameterType="String">
+        update tag set count = count+1 where id =#{id}
+    </update>
+    <insert id="addET" >
+        insert into ET values(#{empid},#{tagid})
+    </insert>
+    <delete id="deleteET" parameterType="String">
+        delete from et where empid =#{empid}
+    </delete>
+    <select id="findNumber" parameterType="String" resultType="Integer">
+        select count(tagid) from et where tagid = #{tagid}
+    </select>
+    <update id="updateTag" parameterType="tag">
+        update tag set name=#{name},count=#{count} where id =#{id}
+    </update>
+</mapper>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.EmpDao">
+    <resultMap id="aa" type="emp">
+        <id column="eid" property="id"/>
+        <result column="ename" property="name"/>
+        <result column="age" property="age"/>
+        <result column="bir" property="bir"/>
+        <result column="salary" property="salary"/>
+        <result column="deptid" property="deptid"/>
+        <association property="dept" javaType="Dept">
+            <id column="did" property="id"/>
+            <result column="dname" property="name"/>
+        </association>
+    </resultMap>
+    <insert id="add" parameterType="emp">
+        insert into emp values(#{id},#{name},#{age},#{bir},#{salary},#{deptid})
+    </insert>
+    <delete id="delete" parameterType="String">
+        delete from emp where id =#{id}
+    </delete>
+    <update id="update" parameterType="emp">
+        update emp set name=#{name},age=#{age},bir=#{bir},salary=#{salary},deptid=#{deptid} where id =#{id} 
+    </update>
+    
+
+    <select id="findByPage" resultMap="aa">
+        select e.id eid,e.name ename,age,bir,salary,deptid,d.id did,d.name dname
+        from (select * from emp limit #{start},#{rows})e left join dept d
+        on e.deptid = d.id 
+    </select>
+    <select id="findTotals" resultType="Long">
+        select count(id) from emp
+    </select>
+    <select id="findAll" resultType="dept">
+        select * from dept
+        <where>
+            <if test=""></if>
+        </where>
+    </select>
+</mapper>

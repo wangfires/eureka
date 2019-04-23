@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .aa{background: yellow;border: #9acfea solid 1px}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!--导航条标题-->
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">后台管理系统V1.0</a>
+            </div>
+            <ul class="nav nav-tabs pull-right">
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-globe"></span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-tint"></span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-signal"></span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="row">
+        <!--页面菜单-->
+        <div class="col-md-2">
+        <div class="panel panel-default">
+            <div class="panel-heading" >
+
+                    <div class="input-group">
+                        <input type="text" class="form-control"  aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span></span>
+                    </div>
+                    <ul class="list-group">
+
+                        <br>
+                        <li class="list-group-item "><a href="./tags.html">客户管理</a></li>
+                        <li class="list-group-item" ><a href="./tags.html">客户拜访</a></li>
+                        <li class="list-group-item" ><a href="./tags.html">系统管理</a></li>
+                    </ul>
+
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-10">
+
+            <h2>客户管理</h2>
+
+            <hr>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputName2">客户名称</label>
+                            <input type="text" class="form-control" id="exampleInputName2" >
+                        </div>
+                        <div class="form-group dropdown">
+                            <span>客户来源</span>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                ---请选择---
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="form-group dropdown">
+                            <span>所属行业</span>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                ---请选择---
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="form-group dropdown">
+                            <span>客户级别</span>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                ---请选择---
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="btn btn-primary">查询</button>
+                    </form>
+                </li>
+
+            </ul>
+
+
+
+                <table class="table table-bordered table-striped table-hover"  >
+                    <tr><td colspan="8">客户信息列表</td></tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>客户名称</td>
+                        <td>客户来源</td>
+                        <td>客户所属行业</td>
+                        <td>客户级别</td>
+                        <td>固定电话</td>
+                        <td>手机</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王王</td>
+                        <td>河南</td>
+                        <td>互联网</td>
+                        <td>绝密</td>
+                        <td>1383838438</td>
+                        <td>1383838438</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">修改</button>
+                            <input class="btn btn-danger" type="button" value="删除">
+                        </td>
+                    </tr>
+                </table>
+                </li>
+            <nav aria-label="Page navigation" class="pull-right" >
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+</div>
+</div>
+</div>
+</body>
+</html>

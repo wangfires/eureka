@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.EmpDao">
+    <resultMap id="aa" type="com.baizhi.entity.Emp">
+        <id column="eid" property="id"/>
+        <result column="ename" property="name"/>
+        <result column="age" property="age"/>
+        <result column="bir" property="bir"/>
+        <result column="salary" property="salary"/>
+        <collection property="tags" ofType="com.baizhi.entity.Tag">
+            <id column="tid" property="id"></id>
+            <result column="tname" property="name"></result>
+            <result column="count" property="count"></result>
+        </collection>
+    </resultMap>
+    <insert id="addEmp" parameterType="emp">
+        insert into emp values(#{id},#{name},#{age},#{bir},#{salary})
+    </insert>
+    <delete id="deleteEmp" parameterType="String">
+        delete from emp where id =#{id}
+    </delete>
+    <update id="updateEmp" parameterType="emp">
+        update emp set id=#{id},name=#{name},age=#{age},bir=#{bir},salary=#{salary} where id =#{id}
+    </update>
+    <select id="selectById" parameterType="String" resultMap="aa">
+        select e.id as eid,e.name as ename,age,bir,salary,t.id as tid,t.name as tname,count from
+       (emp e left join et e1 on e.id=e1.empid left join tag t on e1.tagid=t.id) where e.id =#{id}
+    </select>
+    <select id="findAll" resultMap="aa">
+       select e.id as eid,e.name as ename,age,bir,salary,t.id as tid,t.name as tname,count from
+       (emp e left join et e1 on e.id=e1.empid left join tag t on e1.tagid=t.id)
+    </select>
+    <select id="findByPage" resultMap="aa">
+       select e.id as eid,e.name as ename,age,bir,salary,t.id as tid,t.name as tname,count from
+       (select * from emp limit #{begin},#{pageSize}) e left join et e1 on e.id=e1.empid left join tag t on e1.tagid=t.id
+    </select>
+    <select id="findCount" resultType="Integer">
+        select count(id) from emp
+    </select>
+
+</mapper>

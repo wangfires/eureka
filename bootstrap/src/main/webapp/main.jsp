@@ -1,0 +1,181 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; utf-8" isELIgnored="false" %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .aa{background: yellow;border: #9acfea solid 1px}
+    </style>
+    <script>
+        $(function () {
+
+             $("#user").click(function () {
+                 $("#aaa").empty();
+                 //引入其他页面内容
+                 $("#aaa").load("./aa.html");
+
+             });
+            $("#type").click(function () {
+                $("#aaa").empty();
+                //引入其他页面内容
+                $("#aaa").load("./type.html");
+
+            });
+            $("#book").click(function () {
+                $("#aaa").empty();
+                //引入其他页面内容
+                $("#aaa").load("./book.html");
+
+            });
+            $("#order").click(function () {
+                $("#aaa").empty();
+                //引入其他页面内容
+                $("#aaa").load("./order.html");
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <!--导航条标题-->
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">后台管理系统V1.0</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <!--生成链接-->
+                <li class=""><a> 欢迎:<span  class="text-primary">小黑</span></a></li>
+                <li class=""><a> 退出登录 <span  class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="col-sm-2">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne " aria-expanded="true" aria-controls="collapseOne" id="user">
+                            用户管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        用户列表
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne1">
+                    <h4 class="panel-title">
+                        <a role="button" id="type" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                            类别管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body ">
+                        类别列表
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne2">
+                    <h4 class="panel-title">
+                        <a role="button" id="book" data-toggle="collapse" data-parent="#accordion" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                            图书管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        图书列表
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne3">
+                    <h4 class="panel-title">
+                        <a role="button" id="order" data-toggle="collapse" data-parent="#accordion" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
+                            订单管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        订单列表
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10" id="aaa">
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            <strong><h4><b>网站程序漏洞，继续修复！</b></h4></strong>
+            <p>当前版本程序（v1.0）存在严重安全问题，容易造成攻击，请<strong><b>立即修复！！！</b></strong></p>
+            <br>
+            <button class="btn btn-danger">立即修复</button> <button class="btn btn-default">稍后修复</button>
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">系统状态</div>
+            <div class="panel-body">
+                <p>内存使用率:40%</p>
+                <div class="progress">
+
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+                <p>数据库使用率:20%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <p>磁盘使
+                    用率:60%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                </div>
+                <p>CPU使用率:80%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

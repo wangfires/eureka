@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+
+
+
+
+
+	<package name="user" extends="struts-default" namespace="/user">
+		<action name="delete" class="userAction" method="delete">
+			<result>/index.jsp</result>
+		</action>
+
+	</package>
+
+
+</struts>

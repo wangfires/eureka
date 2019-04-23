@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!--创建数据源对象-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+<!--创建sqlSessionFactory-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="typeAliasesPackage" value="com.baizhi.entity"></property>
+        <property name="mapperLocations">
+            <array>
+             <value>classpath:com/baizhi/mapper/UserMapper.xml</value>
+            </array>
+        </property>
+
+    </bean>
+<!--创建项目的所有dao对象-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="basePackage" value="com.baizhi.dao"></property>
+
+    </bean>
+<!--创建事务管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactionManager" >
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+<!--创建事务通知对象-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="delete*"/>
+        </tx:attributes>
+    </tx:advice>
+<!--配置事务切面-->
+    <aop:config>
+        <aop:pointcut id="pc" expression="within(com.baizhi.service.*ServiceImpl)"></aop:pointcut>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pc"></aop:advisor>
+
+    </aop:config>
+<!--创建service组件对象-->
+    <bean id="userService" class="com.baizhi.service.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <!--将action组件交给spring管理-->
+    <bean class="com.baizhi.action.UserAction" id="userAction" scope="prototype">
+        <property name="us" ref="userService"></property>
+    </bean>
+</beans>

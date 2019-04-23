@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 移动设备优先
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .aa{background: yellow;border: #9acfea solid 1px}
+    </style>
+    <script>
+        $(function () {
+            $("#nn").click(function () {
+
+                $("#myModal").modal('show');
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div class="container" style="border: yellow solid 1px">
+    <div class="row" style="border: #2aabd2 solid 1px">
+        <div class="col-sm-1 aa" >en </div>
+        <div class="col-sm-10 aa">ya </div>
+        <div class="col-sm-1 aa">ying</div>
+    </div>
+    <div class="row" style="border: #3c763d solid 1px">
+        <div class="col-sm-2 aa">en </div>
+        <div class="col-sm-8 aa">ya </div>
+        <div class="col-sm-2 aa">ying</div>
+    </div>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr class="active">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+
+        <tr class="warning">
+            <td>往</td>
+            <td>往</td>
+            <td>返</td>
+            <td>返</td>
+            <td>来</td>
+        </tr>
+        <tr class="danger">
+            <td>往</td>
+            <td>往</td>
+            <td>返</td>
+            <td>返</td>
+            <td>来</td>
+        </tr>
+
+        <tr class="info">
+            <td>往</td>
+            <td>往</td>
+            <td>返</td>
+            <td>返</td>
+            <td>来</td>
+        </tr>
+
+        <tr class="success">
+            <td>往</td>
+            <td>往</td>
+            <td>返</td>
+            <td>返</td>
+            <td>来</td>
+        </tr>
+
+
+    </table>
+    <p class="text-muted">1111</p>
+    <p class="text-primary">1111</p>
+    <p class="text-success">1111</p>
+    <p class="text-info">1111</p>
+    <p class="text-danger">1111</p>
+    <p class="bg-primary">...</p>
+    <p class="bg-success">...</p>
+    <p class="bg-info">...</p>
+    <p class="bg-warning">...</p>
+    <p class="bg-danger">...</p>
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span class="caret"></span>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            ------------------------------------------------------------------------------
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-3 control-label">用户名:</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="name" placeholder="请输入用户名" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="psw" class="col-sm-3 control-label">密码:</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="psw" placeholder="请输入密码" class="form-control"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <a class="btn btn-default">link</a>
+    <button class="btn btn-default">按钮</button>
+    <input class="btn btn-default" type="button" value="input"/>
+    <hr>
+    <a class="btn btn-primary btn-lg">link</a>
+    <button class="btn btn-warning">按钮</button>
+    <input class="btn btn-danger btn-sm" type="button" value="input"/>
+    <input class="btn btn-success btn-xs" type="button" value="input"/>
+    <input class="btn btn-info" type="button" value="input"/>
+    <hr>
+    <span class="glyphicon glyphicon-grain">嘤嘤嘤</span>
+    <hr>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+
+    </div>
+    <hr>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">1</button>
+        <button type="button" class="btn btn-default">2</button>
+        <button type="button" class="btn btn-default">3</button>
+
+    </div>
+    <hr>
+    <div class="col-lg-6">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control" aria-label="...">
+        </div><!-- /input-group -->
+
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!--模态框标题-->
+                    <div class="modal-header">
+                        <!--
+                            用来关闭模态框的属性:data-dismiss="modal"
+                        -->
+                        <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                        <h4 class="modal-title">编辑用户信息</h4>
+                    </div>
+
+                    <!--模态框内容体-->
+                    <div class="modal-body">
+
+                        <form action="" class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="name" id="name1" placeholder="请输入姓名" class="form-control">
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!--模态页脚-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">保存</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--标签-->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#list" data-toggle="tab">用户列表</a></li>
+        <li><a href="#saveInfo" data-toggle="tab">用户添加</a></li>
+        <li class="dropdown">
+            <!--触发器-->
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                下拉菜单 <span class="caret"></span>
+            </a>
+            <!--下拉菜单-->
+            <ul class="dropdown-menu">
+                <li><a href="#SpringMvc" data-toggle="tab">SpringMVC</a></li>
+                <li><a href="#SpringBoot" data-toggle="tab">SpringBOOT</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--标签内容组-->
+    <div class="tab-content">
+        <!--标签内容面板-->
+        <div class="tab-pane active" id="list">A</div>
+
+        <div class="tab-pane" id="saveInfo">B</div>
+        <div class="tab-pane" id="SpringMvc">SpringMvc</div>
+        <div class="tab-pane" id="SpringBoot">SpringBoot</div>
+    </div>
+    <a class="btn btn-primary" id="nn">点击触发模态框</a>
+</div>
+<ul class="nav nav-pills ">
+    <li class="active"><a href="#mvc" data-toggle="pill">Springmvc</a></li>
+    <li><a href="#boot" data-toggle="pill">SpringBoot</a></li>
+</ul>
+
+
+
+<!--标签页内容组-->
+<div class="tab-content">
+    <div class="tab-pane active" id="mvc">MVC</div>
+    <div class="tab-pane" id="boot">Boot</div>
+</div>
+</body>
+</html>

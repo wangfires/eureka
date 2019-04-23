@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TestA/TestA.iml" filepath="$PROJECT_DIR$/TestA/TestA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testSession/TestS.iml" filepath="$PROJECT_DIR$/testSession/TestS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax_day1/ajax_day1.iml" filepath="$PROJECT_DIR$/ajax_day1/ajax_day1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap/bootstrap.iml" filepath="$PROJECT_DIR$/bootstrap/bootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap_day1/bootstrap_day1.iml" filepath="$PROJECT_DIR$/bootstrap_day1/bootstrap_day1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmfz_wy/cmfz_wy.iml" filepath="$PROJECT_DIR$/cmfz_wy/cmfz_wy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emp/emp.iml" filepath="$PROJECT_DIR$/emp/emp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ems/ems.iml" filepath="$PROJECT_DIR$/ems/ems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/es_day2/es_day2.iml" filepath="$PROJECT_DIR$/es_day2/es_day2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client1/eureka-client1.iml" filepath="$PROJECT_DIR$/eureka-client1/eureka-client1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client2/eureka-client2.iml" filepath="$PROJECT_DIR$/eureka-client2/eureka-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client3/eureka-client3.iml" filepath="$PROJECT_DIR$/eureka-client3/eureka-client3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client4/eureka-client4.iml" filepath="$PROJECT_DIR$/eureka-client4/eureka-client4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-customer/eureka-customer.iml" filepath="$PROJECT_DIR$/eureka-customer/eureka-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka2/eureka2.iml" filepath="$PROJECT_DIR$/eureka2/eureka2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file_wy/file_wy.iml" filepath="$PROJECT_DIR$/file_wy/file_wy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqgrid/jqgrid.iml" filepath="$PROJECT_DIR$/jqgrid/jqgrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinglun/pinglun.iml" filepath="$PROJECT_DIR$/pinglun/pinglun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis_day1/redis_day1.iml" filepath="$PROJECT_DIR$/redis_day1/redis_day1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis_day2/redis_day2.iml" filepath="$PROJECT_DIR$/redis_day2/redis_day2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdr/sdr.iml" filepath="$PROJECT_DIR$/sdr/sdr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sm/sm.iml" filepath="$PROJECT_DIR$/sm/sm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sm1/sm1.iml" filepath="$PROJECT_DIR$/sm1/sm1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc/springmvc.iml" filepath="$PROJECT_DIR$/springmvc/springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stu/stu.iml" filepath="$PROJECT_DIR$/stu/stu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upload/upload.iml" filepath="$PROJECT_DIR$/upload/upload.iml" />
+    </modules>
+  </component>
+</project>

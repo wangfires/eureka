@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script>
+        $(function () {
+            $("#add").click(function () {
+
+                $("#myModal").modal('show');
+            })
+
+        })
+    </script>
+    <style>
+        .aa{background: yellow;border: #9acfea solid 1px}
+        .page-header{margin-top: 0px}
+        .page-header h1{margin-top: 0px}
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <!--导航条标题-->
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">后台管理系统V1.0</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <!--生成链接-->
+                <li class=""><a> 欢迎:<span  class="text-primary">小黑</span></a></li>
+                <li class=""><a> 退出登录 <span  class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="col-sm-2">
+        <div class="panel-group" id="panelgroup">
+
+
+            <!--创建面板-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!--使用连接完成折叠效果-->
+                        <a href="#aa" data-toggle="collapse" data-parent="#panelgroup" ><h5>用户管理</h5></a>
+                    </div>
+                </div>
+
+                <div class="panel-collapse collapse" id="aa">
+                    <ul class="list-group">
+                        <li class="list-group-item active">用户列表</li>
+                        <li class="list-group-item">用户添加</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--创建另一个面板-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!--使用连接完成折叠效果-->
+                        <a href="#bb" data-toggle="collapse" data-parent="#panelgroup" ><h5>类别管理</h5></a>
+                    </div>
+                </div>
+
+                <div class="panel-collapse collapse" id="bb">
+                    <ul class="list-group">
+                        <li class="list-group-item">类别列表</li>
+                        <li class="list-group-item">添加类别</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!--使用连接完成折叠效果-->
+                        <a href="#bb" data-toggle="collapse" data-parent="#panelgroup" ><h5>图书管理</h5></a>
+                    </div>
+                </div>
+
+                <div class="panel-collapse collapse" id="cc">
+                    <ul class="list-group">
+                        <li class="list-group-item">类别列表</li>
+                        <li class="list-group-item">添加类别</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!--使用连接完成折叠效果-->
+                        <a href="#bb" data-toggle="collapse" data-parent="#panelgroup" ><h5>订单管理</h5></a>
+                    </div>
+                </div>
+
+                <div class="panel-collapse collapse" id="dd">
+                    <ul class="list-group">
+                        <li class="list-group-item">类别列表</li>
+                        <li class="list-group-item">添加类别</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <div class="page-header">
+            <h1>用户管理</h1>
+        </div>
+        <div class="tab-pane">
+            <ul class="nav nav-tabs">
+                <li  role="presentation" class="active"><a href="#">用户列表</a></li>
+                <li  role="presentation"><a id="add">用户添加</a></li>
+
+            </ul>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body col-md-offset-3">
+                <form action="" class="form-inline">
+                    <div class="form-group">
+                        <label for="a">姓名:</label>
+                        <input type="text" id="a" name="name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">手机:</label>
+                        <input type="text" id="pwd" name="name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="select">激活状态:</label>
+                        <select id="select" class="form-control">
+                            <option >---请选择---</option>
+                        </select>
+                    </div>
+                    <a class="btn btn-primary">查询</a>
+
+                </form>
+
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <td>id</td>
+                    <td>用户名</td>
+                    <td>密码</td>
+                    <td>生日</td>
+                    <td>手机</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ww</td>
+                    <td>12315</td>
+                    <td>2015/02/02</td>
+                    <td>13654874154</td>
+                    <td>冻结</td>
+                    <td> <button class="btn btn-primary" type="submit">修改</button>
+                        <input class="btn btn-danger" type="button" value="删除"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ww</td>
+                    <td>12315</td>
+                    <td>2015/02/02</td>
+                    <td>13654874154</td>
+                    <td>冻结</td>
+                    <td> <button class="btn btn-primary" type="submit">修改</button>
+                        <input class="btn btn-danger" type="button" value="删除"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ww</td>
+                    <td>12315</td>
+                    <td>2015/02/02</td>
+                    <td>13654874154</td>
+                    <td>冻结</td>
+                    <td> <button class="btn btn-primary" type="submit">修改</button>
+                        <input class="btn btn-danger" type="button" value="删除"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ww</td>
+                    <td>12315</td>
+                    <td>2015/02/02</td>
+                    <td>13654874154</td>
+                    <td>冻结</td>
+                    <td> <button class="btn btn-primary" type="submit">修改</button>
+                        <input class="btn btn-danger" type="button" value="删除"></td>
+                </tr>
+
+            </table>
+
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><b>删除成功！</b></strong>
+        </div>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><b>删除失败！</b></strong>java.lang.RuntimeException:无效数字
+        </div>
+    </div>
+    </div>
+<div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--模态框标题-->
+            <div class="modal-header">
+                <!--
+                    用来关闭模态框的属性:data-dismiss="modal"
+                -->
+                <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                <h4 class="modal-title">编辑用户信息</h4>
+            </div>
+
+            <!--模态框内容体-->
+            <div class="modal-body">
+
+                <form action="" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="name" placeholder="请输入姓名" class="form-control">
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <label class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="psd" placeholder="请输入密码" class="form-control">
+                        </div>
+                        </div>
+                            <div class="form-group">
+                        <label class="col-sm-2 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="age" placeholder="请输入年龄" class="form-control">
+                        </div>
+                            </div>
+                                <div class="form-group">
+                        <label class="col-sm-2 control-label">生日</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="bir" placeholder="请输入生日" class="form-control">
+                        </div>
+                                </div>
+                                    <div class="form-group">
+                        <label class="col-sm-2 control-label">手机</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="phone" placeholder="请输入手机号" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">激活状态</label>
+                        <div class="col-sm-10">
+                            <select class="form-control">
+                                <option >激活</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+            <!--模态页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+            </div>
+
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

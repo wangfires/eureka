@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+<package name="comments" extends="struts-default" namespace="/comments">
+    <action name="findAll" class="com.baizhi.action.CommentsAction" method="findAll">
+        <result>/index.jsp</result>
+    </action>
+    <action name="updateContent" class="com.baizhi.action.CommentsAction" method="updateContent"></action>
+    <action name="updateCount" method="updateCount" class="com.baizhi.action.CommentsAction"></action>
+</package>
+		
+		
+
+	
+
+</struts>

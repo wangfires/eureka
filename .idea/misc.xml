@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ajax_day1" />
+    <file type="web" url="file://$PROJECT_DIR$/bootstrap" />
+    <file type="web" url="file://$PROJECT_DIR$/bootstrap_day1" />
+    <file type="web" url="file://$PROJECT_DIR$/emp" />
+    <file type="web" url="file://$PROJECT_DIR$/ems" />
+    <file type="web" url="file://$PROJECT_DIR$/file_wy" />
+    <file type="web" url="file://$PROJECT_DIR$/jqgrid" />
+    <file type="web" url="file://$PROJECT_DIR$/maven_web" />
+    <file type="web" url="file://$PROJECT_DIR$/pinglun" />
+    <file type="web" url="file://$PROJECT_DIR$/redis_day1" />
+    <file type="web" url="file://$PROJECT_DIR$/sm" />
+    <file type="web" url="file://$PROJECT_DIR$/sm1" />
+    <file type="web" url="file://$PROJECT_DIR$/spring" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc" />
+    <file type="web" url="file://$PROJECT_DIR$/TestA" />
+    <file type="web" url="file://$PROJECT_DIR$/upload" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven_web/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_idea/pom.xml" />
+        <option value="$PROJECT_DIR$/ajax_day1/pom.xml" />
+        <option value="$PROJECT_DIR$/pinglun/pom.xml" />
+        <option value="$PROJECT_DIR$/spring/pom.xml" />
+        <option value="$PROJECT_DIR$/sm/pom.xml" />
+        <option value="$PROJECT_DIR$/sm1/pom.xml" />
+        <option value="$PROJECT_DIR$/emp/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/ems/pom.xml" />
+        <option value="$PROJECT_DIR$/upload/pom.xml" />
+        <option value="$PROJECT_DIR$/file_wy/pom.xml" />
+        <option value="$PROJECT_DIR$/bootstrap_day1/pom.xml" />
+        <option value="$PROJECT_DIR$/bootstrap/pom.xml" />
+        <option value="$PROJECT_DIR$/jqgrid/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/stu/pom.xml" />
+        <option value="$PROJECT_DIR$/redis_day1/pom.xml" />
+        <option value="$PROJECT_DIR$/sdr/pom.xml" />
+        <option value="$PROJECT_DIR$/redis_day2/pom.xml" />
+        <option value="$PROJECT_DIR$/TestA/pom.xml" />
+        <option value="$PROJECT_DIR$/es_day2/pom.xml" />
+        <option value="$PROJECT_DIR$/cmfz_wy/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka - client/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client1/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client3/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client2/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka2/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client4/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

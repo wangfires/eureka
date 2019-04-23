@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+    <package name="tag" extends="struts-default" namespace="/tag">
+        <action name="saveTag" class="tagAction" method="saveTag">
+            <result type="redirectAction">findAll</result>
+        </action>
+        <action name="findAll" class="tagAction" method="findAll">
+            <result>/main/tags.jsp</result>
+        </action>
+
+        <action name="removeTag" class="tagAction" method="removeTag">
+            <result type="redirectAction">findAll</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,315 @@
+<div class="page-header">
+    <h1>类别管理</h1>
+</div>
+
+<div class="tab-pane">
+    <ul class="nav nav-tabs">
+        <li  role="presentation" class="active" ><a href="#">类别列表</a></li>
+        <li  role="presentation"><a id="add1" data-toggle="modal" data-target="#books">添加图书</a></li>
+
+    </ul>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-body col-md-offset-3">
+        <form action="" class="form-inline" i>
+
+            <div class="form-group">
+                <label for="select">查询条件：</label>
+                <select id="select" class="form-control">
+                    <option >---请选择---</option>
+                    <option >书名</option>
+                    <option >出版社</option>
+                    <option >作者</option>
+                </select>
+                <div class="form-group">
+                    <label for="pwd">请输入查询条件</label>
+                    <input type="text" id="pwd" name="name" class="form-control"/>
+                </div>
+            </div>
+            <a class="btn btn-danger" id="cx">搜索</a>
+        </form>
+    </div>
+    <table class="table table-striped" >
+        <tr>
+            <td>名称</td>
+            <td>作者</td>
+            <td>定价</td>
+            <td>当当价</td>
+            <td>出版社</td>
+            <td>出版时间</td>
+            <td>封面图</td>
+            <td>销量</td>
+            <td>库存</td>
+            <td>
+                操作
+            </td>
+
+
+        </tr>
+       <tr>
+           <td>舔狗的自我修养</td>
+           <td>不知名舔狗</td>
+           <td>500</td>
+           <td>50</td>
+           <td>舔狗出版社</td>
+           <td>2008-02-03</td>
+           <td><img src="img/TIM图片20190313204141.png" width="100" height="50"/></td>
+           <td>500</td>
+           <td>600</td>
+           <td>
+               <a class="btn btn-primary" data-toggle="modal" data-target="#books">修改</a>
+               <button class="btn btn-danger">删除</button>
+           </td>
+    </tr>
+        <tr>
+            <td>舔狗的自我修养</td>
+            <td>不知名舔狗</td>
+            <td>500</td>
+            <td>50</td>
+            <td>舔狗出版社</td>
+            <td>2008-02-03</td>
+            <td><img src="img/TIM图片20190313204141.png" width="100" height="50"/></td>
+            <td>500</td>
+            <td>600</td>
+            <td>
+                <a class="btn btn-primary" data-toggle="modal" data-target="#books">修改</a>
+                <button class="btn btn-danger">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>舔狗的自我修养</td>
+            <td>不知名舔狗</td>
+            <td>500</td>
+            <td>50</td>
+            <td>舔狗出版社</td>
+            <td>2008-02-03</td>
+            <td><img src="img/TIM图片20190313204141.png" width="100" height="50"/></td>
+            <td>500</td>
+            <td>600</td>
+            <td>
+                <a class="btn btn-primary" data-toggle="modal" data-target="#books">修改</a>
+                <button class="btn btn-danger">删除</button>
+            </td>
+        </tr>
+        <tr>
+        <td>舔狗的自我修养</td>
+        <td>不知名舔狗</td>
+        <td>500</td>
+        <td>50</td>
+        <td>舔狗出版社</td>
+        <td>2008-02-03</td>
+        <td><img src="img/TIM图片20190313204141.png" width="100" height="50"/></td>
+        <td>500</td>
+        <td>600</td>
+        <td>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#books">修改</a>
+            <button class="btn btn-danger">删除</button>
+        </td>
+    </tr>
+
+
+
+    </table>
+    <nav aria-label="Page navigation" class="pull-right">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+<div class="modal fade" id="books" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--模态框标题-->
+            <div class="modal-header">
+                <!--
+                    用来关闭模态框的属性:data-dismiss="modal"
+                -->
+                <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                <h4 class="modal-title">添加类别</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" class="form-horizontal" id="f1">
+                    <div class="row">
+                    <div class="col-sm-6">
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">图书</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name" id="name2"  class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">所属分类</label>
+                        <div class="col-sm-8">
+                            <input type="hidden" name="id" value="" id="id">
+                            <select class="form-control">
+                                <option>---请选择---</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">原价</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">当当价</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">库存</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">作者</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">出版社</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">出版时间</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">版次</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">印刷时间</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">印次</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ISBN</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">开本</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+
+                    </div>
+                        <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">纸张</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">包装</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name"  class="form-control">
+                        </div>
+                    </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">页数</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name"  class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">字数</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name"  class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">封面</label>
+                            <div class="col-sm-8">
+                                <input type="file" name="name"  class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">编辑推荐</label>
+                            <div class="col-sm-8">
+                                <textarea type="" name="name"  class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">内容简介</label>
+                            <div class="col-sm-8">
+                                <textarea type="" name="name"  class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">作者简介</label>
+                            <div class="col-sm-8">
+                                <textarea type="" name="name"  class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">基本目录</label>
+                            <div class="col-sm-8">
+                                <textarea type="" name="name"  class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">媒体评论</label>
+                            <div class="col-sm-8">
+                                <textarea type="" name="name"  class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!--模态页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save">提交</button>
+                <button type="button" class="btn btn-danger" id="qs" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.CommentsDao">
+  	<select id="findAll" resultType="comments">
+		select id,matter as matters,count,userid from comments
+	</select>
+	<insert id="addComments" parameterType="comments">
+		insert into comments values (#{id},#{matters},#{count},#{userId})
+	</insert>
+	<update id="update" parameterType="String">
+		update comments set count=count+1 where id =#{id}
+	</update>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+
+
+
+
+
+	<package name="province" extends="struts-default" namespace="/province">
+		<action name="findProvince" class="com.baizhi.action.ProvinceAction" method="findProvince"></action>
+		<action name="findCity" class="com.baizhi.action.ProvinceAction" method="findCity"></action>
+		<action name="findArea" class="com.baizhi.action.ProvinceAction" method="findArea"></action>
+	</package>
+
+
+</struts>

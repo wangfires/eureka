@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ajax_day1" />
+        <module name="bootstrap" />
+        <module name="bootstrap_day1" />
+        <module name="cmfz_wy" />
+        <module name="emp" />
+        <module name="ems" />
+        <module name="es_day2" />
+        <module name="eureka" />
+        <module name="eureka-client1" />
+        <module name="eureka-client2" />
+        <module name="eureka-client3" />
+        <module name="eureka-client4" />
+        <module name="eureka-customer" />
+        <module name="eureka2" />
+        <module name="file_wy" />
+        <module name="jqgrid" />
+        <module name="pinglun" />
+        <module name="redis_day1" />
+        <module name="redis_day2" />
+        <module name="sdr" />
+        <module name="sm" />
+        <module name="sm1" />
+        <module name="spring" />
+        <module name="springboot" />
+        <module name="springmvc" />
+        <module name="stu" />
+        <module name="TestA" />
+        <module name="TestS" />
+        <module name="upload" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ajax_day1" target="1.7" />
+      <module name="bootstrap" target="1.7" />
+      <module name="bootstrap_day1" target="1.7" />
+      <module name="cmfz_wy" target="1.8" />
+      <module name="emp" target="1.7" />
+      <module name="ems" target="1.7" />
+      <module name="es" target="1.7" />
+      <module name="es_day2" target="8" />
+      <module name="eureka" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-client1" target="1.8" />
+      <module name="eureka-client2" target="1.8" />
+      <module name="eureka-client3" target="1.8" />
+      <module name="eureka-client4" target="1.8" />
+      <module name="eureka-customer" target="1.8" />
+      <module name="eureka2" target="1.8" />
+      <module name="file_wy" target="1.7" />
+      <module name="jqgrid" target="1.7" />
+      <module name="maven_idea" target="1.7" />
+      <module name="maven_web" target="1.7" />
+      <module name="mybatisyh" target="1.8" />
+      <module name="pinglun" target="1.7" />
+      <module name="redis_day1" target="1.7" />
+      <module name="redis_day2" target="1.7" />
+      <module name="sdr" target="1.7" />
+      <module name="sm" target="1.7" />
+      <module name="sm1" target="1.7" />
+      <module name="spring" target="1.7" />
+      <module name="springboot" target="1.7" />
+      <module name="springmvc" target="1.7" />
+      <module name="stu" target="1.7" />
+      <module name="TestA" target="1.7" />
+      <module name="TestS" target="1.7" />
+      <module name="testSession" target="1.7" />
+      <module name="upload" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+
+
+
+
+
+	<package name="tag" extends="struts-default" namespace="/tag">
+		<action name="saveTag" class="tagAction" method="saveTag">
+			<result type="redirectAction">findAll</result>
+		</action>
+		<action name="findAll" class="tagAction" method="findAll">
+			<result>/main/tags.jsp</result>
+		</action>
+
+		<action name="removeTag" class="tagAction" method="removeTag">
+			<result type="redirectAction">findAll</result>
+		</action>
+	</package>
+	<package name="user" extends="struts-default" namespace="/user">
+		<action name="login" method="login" class="userAction">
+			<result name="ok" type="redirectAction">
+				<param name="namespace">/emp</param>
+				<param name="actionName">findByPage</param>
+			</result>
+			<result name="error" >/main/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="emp" extends="struts-default" namespace="/emp">
+		<action name="findAll" class="empAction" method="findAll">
+			<result>/main/index.jsp</result>
+		</action>
+		<action name="saveEmp" method="saveEmp" class="empAction">
+			<result type="redirectAction">findByPage</result>
+		</action>
+		<action name="removeEmp" class="empAction" method="removeEmp">
+			<result type="redirectAction">findByPage</result>
+		</action>
+		<action name="findOne" class="empAction" method="findOne">
+
+		</action>
+		<action name="updateEmp" method="updateEmp" class="empAction">
+			<result type="redirectAction">findByPage</result>
+		</action>
+		<action name="findByPage" class="empAction" method="findByPage">
+			<result>/main/index.jsp</result>
+		</action>
+		<action name="findTags" class="empAction" method="findTags"></action>
+	</package>
+
+</struts>

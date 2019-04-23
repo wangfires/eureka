@@ -1,0 +1,289 @@
+<script>
+
+    $(function () {
+
+        $("#save").click(function () {
+            var id=$("#id").val()
+
+            if (""==id){
+                $.post("/boot/user/save",$("#f").serialize(),function (result) {
+                    if(result=="success"){
+                        $("#sc").removeAttr("style");
+                    }else{
+                        $("#er").removeAttr("style");
+                    }
+                    $("#qs").click();
+                    init(1,name,phone);
+                })
+            }else {
+                $.post("/boot/user/update",$("#f").serialize(),function (result) {
+                    if(result=="success"){
+                        $("#sc").removeAttr("style");
+                    }else{
+                        $("#er").removeAttr("style");
+                    }
+                    $("#qs").click();
+                    var name=$("#a").val();
+                    var phone = $("#pwd").val();
+                    var page = $("li[class=active]").children().text();
+                    init(page,name,phone);
+                })
+            }
+
+        })
+
+        $("#cx").click(function () {
+            var name=$("#a").val();
+            var phone = $("#pwd").val();
+            init(1,name,phone);
+        })
+
+        init();
+
+    })
+
+    function init(page,name,phone) {
+
+        $("#td").empty();
+        $("#ul").empty();
+        $.ajax({
+            url:"/boot/user/findByPage",
+            data:{page:page,name:name,phone:phone},
+            type:"post",
+            success:function (result) {
+
+                for (var i = 0;i<result.users.length;i++) {
+
+                    var tr = $("<tr/>");
+                    var idtd = $("<td/>");
+                    var nametd = $("<td/>");
+                    var psdtd = $("<td/>");
+                    var bir = $("<td/>");
+                    var phone = $("<td/>");
+                    var statustd = $("<td/>");
+                    var btd = $("<td/>");
+                    var btn = $("<button/>");
+                    var a = $("<a/>");
+                    idtd.text(result.users[i].id);
+                    nametd.text(result.users[i].name);
+                    psdtd.text(result.users[i].password);
+                    bir.text(result.users[i].bir);
+                    phone.text(result.users[i].phone);
+                    statustd.text("冻结");
+                    a.attr("class", "btn btn-primary update").text("修改");
+                    a.click(function () {
+
+                            var user=$(this).data("user");
+                            console.log(user)
+                            $("#id").val("").val(user.id),
+                                $("#name").val("").val(user.name),
+                                $("#age").val("").val(user.age),
+
+
+                            $("#bir").val("").val(user.bir),
+                                $("#password").val("").val(user.password),
+                                $("#phone").val("").val(user.phone);
+
+
+                    })
+    a.data("user",{id:result.users[i].id,name:result.users[i].name,password:result.users[i].password,bir:result.users[i].bir,phone:result.users[i].phone})
+
+                    a.attr("data-toggle","modal").attr("data-target","#myModal");
+                    btn.attr("class", "btn btn-danger de").text("删除");
+
+                    btd.append(a).append("&nbsp;").append(btn);
+                    tr.append(idtd).append(nametd).append(psdtd).append(bir).append(phone).append(statustd).append(btd);
+                    $("#td").append(tr);
+                }
+                $(".de").click(function () {
+                    var id=$(this).parent().parent().children().first().text();
+                    $.post("/boot/user/remove",{id:id},function (result) {
+                        if(result=="success"){
+                            $("#sc").removeAttr("style");
+                        }else{
+                            $("#er").removeAttr("style");
+                        }
+                        var name=$("#a").val();
+                        var phone = $("#pwd").val();
+                        init(1,name,phone);
+                    })
+
+                })
+                var li1 = $("<li/>");
+                var a1 = $("<a href='#' aria-label='Previous'></a>");
+
+                a1.append("<span aria-hidden='true'>&laquo;</span>");
+                li1.append(a1);
+                $("#ul").append(li1);
+                if (result.page==1){
+                    a1.attr("class","disabled").removeAttr("href");
+                }
+                $("#ul").append(li1);
+                if (result.page==1){
+                    $("#pre").attr("class","disabled").removeAttr("href");
+                }
+                for (var i =1;i<=result.totalPage;i++){
+                    var li = $("<li/>");
+                    var $a =$("<a class='p' href='javascript:void(0);'>"+i+"</a>").click(function () {
+                        var name=$("#a").val();
+                        var phone = $("#pwd").val();
+                        var page = $(this).text();
+                        init(page,name,phone);
+                    });
+                    if(result.page!=i){li.append($a);}
+                    else{li.append("<a href='#'>"+i+"</a>");
+                    li.attr("class","active");
+                    }
+                    $("#ul").append(li);
+                }
+                var li = $("<li/>");
+                var a = $("<a href='#' aria-label='Next'></a>");
+
+                a.append("<span aria-hidden='true'>&raquo;</span>");
+                li.append(a);
+                if (result.page==result.totalPage){
+                    a.attr("class","disabled").removeAttr("href");
+                }
+                $("#ul").append(li);
+
+
+            }
+
+
+        })
+
+    }
+</script>
+        <div class="page-header">
+            <h1>用户管理</h1>
+        </div>
+        <div class="tab-pane">
+            <ul class="nav nav-tabs">
+                <li  role="presentation" ><a href="#">用户列表</a></li>
+                <li  role="presentation"><a id="add" data-toggle="modal" data-target="#myModal">用户添加</a></li>
+
+            </ul>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body col-md-offset-3">
+                <form action="" class="form-inline" id="f1">
+                    <div class="form-group">
+                        <label for="a">姓名:</label>
+                        <input type="text" id="a" name="name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">手机:</label>
+                        <input type="text" id="pwd" name="name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="select">激活状态:</label>
+                        <select id="select" class="form-control">
+                            <option >---请选择---</option>
+                        </select>
+                    </div>
+                    <a class="btn btn-danger" id="cx">查询</a>
+                </form>
+
+            </div>
+            <table class="table table-striped" >
+                <tr>
+                    <td>id</td>
+                    <td>用户名</td>
+                    <td>密码</td>
+                    <td>生日</td>
+                    <td>手机</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+                <tbody id="td">
+
+
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation" class="pull-right">
+                <ul class="pagination" id="ul">
+
+                </ul>
+            </nav>
+            <span class="clearfix"></span>
+
+        </div>
+
+        <div class="alert alert-success alert-dismissible" style="display: none" role="alert" id="sc">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><b>操作成功！</b></strong>
+        </div>
+        <div class="alert alert-danger alert-dismissible" role="alert" style="display: none" id="er">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><b>操作失败！</b></strong>java.lang.RuntimeException:无效数字
+        </div>
+    </div>
+    </div>
+<div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--模态框标题-->
+            <div class="modal-header">
+                <!--
+                    用来关闭模态框的属性:data-dismiss="modal"
+                -->
+                <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                <h4 class="modal-title">编辑用户信息</h4>
+            </div>
+
+            <!--模态框内容体-->
+            <div class="modal-body">
+
+                <form action="" class="form-horizontal" id="f">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="hidden" name="id" value="" id="id">
+                            <input type="text" name="name" id="name" placeholder="请输入姓名" class="form-control">
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <label class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="password" id="password" placeholder="请输入密码" class="form-control">
+                        </div>
+                        </div>
+
+                                <div class="form-group">
+                        <label class="col-sm-2 control-label">生日</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="bir" id="bir" placeholder="请输入生日" class="form-control">
+                        </div>
+                                </div>
+                                    <div class="form-group">
+                        <label class="col-sm-2 control-label">手机</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="phone" id="phone" placeholder="请输入手机号" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">激活状态</label>
+                        <div class="col-sm-10">
+                            <select class="form-control">
+                                <option >激活</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+            <!--模态页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save">保存</button>
+                <button type="button" class="btn btn-danger" id="qs" data-dismiss="modal">取消</button>
+            </div>
+
+        </div>
+    </div>
+        </div>
